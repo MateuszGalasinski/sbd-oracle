@@ -1,1 +1,2 @@
-docker exec -it oracle-db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
+$containerName="oracle-db"
+docker exec -it $containerName bash -c "source /home/oracle/.bashrc; sqlplus /nolog"
