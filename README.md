@@ -18,12 +18,12 @@ Use recreate.ps1 to run container. Read before running in order to configure !
 Here's link to 'Oracle SQL Developer': <https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html>  
 And direct one to version: Win64 with JDK included:  
 <https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html#license-lightbox>  
-Install and connect to db with:
+Install and connect to db with:  
 User: sys  
 Pwd: Oradoc_db1  
 Role: SYSDBA  
-SID: ORCLCDB 
-Host: localhost
+SID: ORCLCDB  
+Host: localhost  
 Port: 1521
 ## cli conneciton
 *connect.ps1* runs cli on container
