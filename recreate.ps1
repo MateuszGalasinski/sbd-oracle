@@ -1,9 +1,12 @@
-
-# If you want to auto-save current container to image, uncommment below (you've been warned these containers are a piece of a bulky abomination)
+$containerName="oracle-db"
+# --> If you want to auto-save current container to image, uncommment below
 # echo "---> Trying to save and delete current db container";;
 # docker commit oracle-db $containerName-$((get-date).ToString('"smh-"s/m/H"-dmy"/d/M/y').Replace('/', '-'));;
 
-docker rm -f $containerName 2>&1>$null;; # delete old if exists
+# --> Specify user/pwd for oracle account
+# docker login container-registry.oracle.com -u $USER -p $PWD
+
+docker rm -f $containerName 2>&1>$null;; # delete old one if exists
 
 echo "---> Running new db container";;
 docker run -d -it --name $containerName -p 1521:1521 -p 5500:5500 -v "OracleData:/ORCL:rw" container-registry.oracle.com/database/enterprise:12.2.0.1;;
