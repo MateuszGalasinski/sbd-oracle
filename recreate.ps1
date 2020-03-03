@@ -4,7 +4,7 @@ $containerName="oracle-db"
 # docker commit oracle-db $containerName-$((get-date).ToString('"smh-"s/m/H"-dmy"/d/M/y').Replace('/', '-'));;
 
 # --> Specify user/pwd for oracle account
-# docker login container-registry.oracle.com -u $USER -p $PWD
+docker login container-registry.oracle.com -u $USER -p $PWD
 
 docker rm -f $containerName 2>&1>$null;; # delete old one if exists
 
